@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
-import {addTodo} from '../redux/todoSlice';
+import {addTodoSaga} from '../redux/todoSlice';
 
 const TodoForm = () => {
     const [task, setTask] = useState('');
@@ -9,7 +9,7 @@ const TodoForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (task.trim()) {
-            dispatch(addTodo(task));
+            dispatch(addTodoSaga(task));
             setTask('');
         }
     };
@@ -45,3 +45,11 @@ const TodoForm = () => {
 };
 
 export default TodoForm;
+
+
+
+
+
+
+
+

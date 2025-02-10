@@ -1,4 +1,6 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, createAction} from '@reduxjs/toolkit';
+
+export const addTodoSaga = createAction("todos/addTodoSaga");
 
 const todoSlice = createSlice({
     name: 'todos',
